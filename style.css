@@ -3,6 +3,20 @@ body {
   font-size: 16px;
 }
 
+
+#header {
+  text-align: center;
+}
+
+hr {
+  padding: 4px;
+  margin: auto;
+  background-color: #000000 ;
+  opacity: 3;
+
+
+}
+
 textarea {
   background: transparent;
   border: none;
@@ -54,6 +68,19 @@ textarea {
 }
 
 .saveBtn i:hover {
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.saveBtn1 {
+  border-left: 1px solid black;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #06aed5;
+  color: white;
+}
+
+.saveBtn1 i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
