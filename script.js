@@ -31,8 +31,18 @@ $(function () {
   // current hour in 24-hour time?
   // var currentHour = today.getHours();
 //
-  $(".time-block")
+function timeOfDayTracker (){
 
+var time = dayjs().hour();
+console.log(time);
+
+ var timeBlock = $(".time-block");
+ timeBlock.each(function(){
+  
+ })
+
+
+}
 
   //
   // TODO: Add code to get any user input that was saved in localStorage and set
@@ -61,7 +71,7 @@ $(function () {
 
 
 
-  
+
  
   })
 
