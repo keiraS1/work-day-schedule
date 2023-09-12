@@ -2,7 +2,7 @@
 // console.log("this works");
 $(function () {
   // console.log(document.querySelector('.hour'))
-  var myKey = 'calendar-list';
+  var myKey = 'calendar-list';// this is the key in the key value pair when storing calendar tasks into localstorage
 
   function loadData() {
     // the present hour- not displayed but stored for use when comparing times of day and color coding the calendar
@@ -13,7 +13,7 @@ $(function () {
       var timeOfDay = container.attr("id");
       // console.log({ timeOfDay });
       $(this).val(calendar[timeOfDay])
-//if the id - converted into a number matches the currenttime-hour then red textarea
+//if the id - converted into a number matches the currenttime-hour then red textarea, + turns the value into number from string
       if (+timeOfDay === currentTime) {
         container.addClass('present')
 //if id number is a smaller number than the number of the currenttime - grey textarea
@@ -42,11 +42,11 @@ $(function () {
   var calendar = getData()
 //click event so that when textarea is filled, clicking save button stores the string into localstorage
   $(".saveBtn").on("click", function () {
-    console.log("this works")
+    // console.log("this works")
     alert("Your task has been saved!");
     // so that we do not repeat multiple times over and over we are using this as/in each "save" button and storing the parent- the div-id of the hour into local storage
     var hourOfDay = $(this).parent().attr("id");
-    //we will also stored the text content that will be stored int he description class
+    //we will also store the text content that will be stored into the description class
     var tasks = $(this).siblings(".description").val();
 
     calendar[hourOfDay] = tasks;
